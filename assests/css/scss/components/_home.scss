@@ -1,0 +1,118 @@
+@use "./../abstracts" as * ;
+#Home 
+{
+    height: 100vh;
+    position: relative;
+    .part1 
+    {
+        @include flex(flex-start);
+        h1 
+        {
+            color: $firstColor;
+            font-size: 65px;
+        }
+        .videoIcon 
+        {
+            a{
+                background-color: transparent;
+                color: $firstColor;
+                @include distance(40px ,40px);
+                border-radius: 50%;
+                @include flex;
+                @include position($p : relative);
+            
+            &::before 
+            {
+                @include createEle(0%,0%);
+                border-radius: 50%;
+                background-color: $firstColor;
+                @include position($t : 50% , $l : 50%);
+                transform: translate(-50%,-50%);
+                transition-duration: 0.5s;
+            }
+            &:hover 
+            {
+                &::before 
+                    {
+                        @include createEle(100%,100%);
+                    }
+                i 
+                {
+                    color: $whiteColor;
+                }    
+              
+            }
+            i 
+            {
+                @include position($t : 50% , $l : 50%);
+                transform: translate(-50%,-50%);
+            }
+        }
+        }
+    }
+    .part2 
+    {
+        @include flex();
+    }
+    #headLine 
+    {
+        margin: 0;
+        .cd-headline 
+        {
+            text-align: left;
+            font-size: 30px;
+        }
+    }
+    .arrows 
+    {
+        @include position ($b:10% , $l : 50%,$z : 3);
+        transform: translateX(-50%);
+        img:not(:first-child) 
+        {
+            @include position($t : 0 , $l : 0)
+        }
+        img 
+        {
+            @include distance(25px, 25px);
+            @for $i from 1 through 3 
+            {
+                &:nth-of-type(#{$i})
+                {
+                    animation: animate#{$i} 2s infinite;
+                }
+            }
+            
+            &:nth-of-type(2)
+            {
+                transform: translateY(20px);
+            }
+            &:nth-of-type(3)
+            {
+                transform: translateY(40px);
+
+            }
+        }
+    }
+    .cd-headline
+    {
+        text-align: left;
+        font-size: 20px;
+        &.clip {
+            
+            .cd-words-wrapper
+            {
+                &::after 
+                {
+                    background-color: $secondColor;
+                }
+            }
+        }
+    }
+//@ it's mean the first image or the direct child of parent (header-->[Home]);
+    >img 
+    {
+        @include position($b : 0 , $l : 0);
+        width: 100%;
+        transform: rotate(180deg);
+    }
+}

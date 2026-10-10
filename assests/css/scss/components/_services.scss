@@ -1,0 +1,71 @@
+@use "./../abstracts" as * ;
+#Services 
+{
+   .part1 
+   {
+        .part
+        { 
+            transition-duration: 0.5s;
+            padding: 25px 20px;
+            border-radius: 10px;
+            margin: auto;
+            width: 45%;
+            transform: translateY(0);
+
+            &:hover 
+            {
+                background-color: $whiteColor;
+                box-shadow: 0 20px 50px #00000080;
+                transform: translateY(-5px);
+            }
+            img 
+            {
+                width: 50px;
+            }
+
+            p 
+            {
+                width: 75%;
+                margin: auto;
+            }
+        } 
+   }
+   .part2 
+   {
+        background-image:url('../images_L10/images/video-bg.jpg');
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-attachment: fixed;
+        min-height: 300px;
+        position: relative;
+        @include flex();
+        z-index: 3;
+        &::before 
+        {
+            @include createEle();
+            background-image: radial-gradient(#68b703, #305d00);
+            @include position ($t : 0 , $l : 0);
+            opacity: 0.8;
+            z-index: -1;
+        }
+         .container 
+         {
+            position: relative;
+         }
+        .controller
+        {
+
+
+
+            i 
+            {
+                color: $whiteColor;
+                font-size: 60px;
+                cursor: pointer;
+
+            }
+        }
+   }
+    
+}

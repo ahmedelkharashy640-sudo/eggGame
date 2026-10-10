@@ -1,0 +1,195 @@
+body {
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#1e528e), color-stop(50%, #728a7c), to(#e9ce5d));
+  background-image: linear-gradient(to bottom, #1e528e 0%, #728a7c 50%, #e9ce5d 100%);
+}
+
+.whiteColor {
+  color: rgb(255, 255, 255);
+}
+
+@keyframes animate1 {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes animate2 {
+  0% {
+    opacity: 0;
+    transform: translateY(0);
+  }
+  50% {
+    opacity: 1;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+}
+@keyframes animate3 {
+  0% {
+    opacity: 0;
+    transform: translateY(0);
+  }
+  50% {
+    opacity: 1;
+    transform: translateY(40px);
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+}
+#Game {
+  height: 100vh;
+  overflow: hidden;
+  position: relative;
+}
+#Game #ChickenContainer {
+  position: relative;
+  height: 150px;
+  margin-top: 20px;
+}
+#Game #ChickenContainer::before {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 100%;
+  width: 100%;
+  height: 30px;
+  background-color: #333;
+  position: absolute;
+  top: initial;
+  bottom: 0%;
+  left: 0%;
+  right: initial;
+  z-index: initial;
+}
+#Game #ChickenContainer .chicken {
+  position: absolute;
+  top: 0;
+  bottom: initial;
+  left: 0;
+  right: initial;
+  z-index: initial;
+  transform: translateX(-50%);
+}
+#Game #ChickenContainer .chicken:nth-of-type(0) {
+  left: 0%;
+}
+#Game #ChickenContainer .chicken:nth-of-type(1) {
+  left: 25%;
+}
+#Game #ChickenContainer .chicken:nth-of-type(2) {
+  left: 50%;
+}
+#Game #ChickenContainer .chicken:nth-of-type(3) {
+  left: 75%;
+}
+#Game #ChickenContainer .chicken i {
+  position: absolute;
+  top: 50%;
+  bottom: initial;
+  left: 50%;
+  right: initial;
+  z-index: initial;
+  transform: translate(-50%, -50%);
+  color: rgb(255, 255, 255);
+  z-index: 2;
+}
+#Game #ChickenContainer .chicken img {
+  width: 150px;
+  position: relative;
+  z-index: 4;
+}
+#Game #Start {
+  position: absolute;
+  top: 50%;
+  bottom: initial;
+  left: 0%;
+  right: initial;
+  z-index: initial;
+  width: 100%;
+  transform: translateY(-50%);
+  padding: 20px 0px;
+  cursor: pointer;
+}
+#Game #Basket {
+  width: fit-content;
+  position: absolute;
+  top: initial;
+  bottom: 28%;
+  left: 0%;
+  right: initial;
+  z-index: initial;
+}
+#Game #Basket img {
+  width: 200px;
+}
+#Game #Basket span {
+  position: absolute;
+  top: initial;
+  bottom: 5%;
+  left: 50%;
+  right: initial;
+  z-index: initial;
+  transform: translateX(-50%);
+  color: rgb(255, 255, 255);
+  font-weight: bolder;
+  font-size: 20px;
+}
+#Game #BrokenEggContainer {
+  height: 150px;
+  margin-top: 20px;
+  position: absolute;
+  top: initial;
+  bottom: 10%;
+  left: 0;
+  right: initial;
+  z-index: initial;
+  width: 100%;
+  z-index: 10;
+}
+#Game #BrokenEggContainer .brokenEgg {
+  position: absolute;
+  top: 0;
+  bottom: initial;
+  left: 0;
+  right: initial;
+  z-index: initial;
+  transform: translateX(-50%);
+  display: none;
+}
+#Game #BrokenEggContainer .brokenEgg:nth-of-type(0) {
+  left: 0%;
+}
+#Game #BrokenEggContainer .brokenEgg:nth-of-type(1) {
+  left: 25%;
+}
+#Game #BrokenEggContainer .brokenEgg:nth-of-type(2) {
+  left: 50%;
+}
+#Game #BrokenEggContainer .brokenEgg:nth-of-type(3) {
+  left: 75%;
+}
+#Game #BrokenEggContainer .brokenEgg img {
+  width: 100px;
+  position: relative;
+}
+#Game footer {
+  position: absolute;
+  top: initial;
+  bottom: 0%;
+  left: 0%;
+  right: initial;
+  z-index: initial;
+  width: 100%;
+}
+
+/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,73 @@
+@use "./../abstracts/" as *;
+
+#Language_Sectors 
+{
+   .part1 
+   {
+
+    background-image:url('../images_L10/images/youth.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    min-height: 300px;
+    position: relative;
+    @include flex();
+    &::before 
+    {
+        @include createEle();
+        background-image: radial-gradient(#68b703, #305d00);
+        @include position ($t : 0 , $l : 0);
+        opacity: 0.8;
+    }
+    .container 
+    {
+        position: relative;
+       
+
+        .buttons 
+        {
+            // @include flex(); --> a solution 
+
+            //^ another solution 
+            width: fit-content;
+            margin: auto;
+            .btn 
+            {
+                font-size: 15px;
+                font-weight: 500;
+                color: $secondColor;
+                background-color: $whiteColor;
+                padding: 10px 20px;
+                transform: translateY(0);
+                transition-duration: 0.4s;
+                transition-property: all;
+                &:hover 
+                {
+                    transform: translateY(-5px);
+                }
+            }
+        }
+    }
+   }
+   .part2 
+   {
+        img 
+        {
+            width: 75%;
+            margin: auto;
+        }
+   }
+   .owl-dots 
+   {
+    @include flex();
+    column-gap: 20px;
+   }
+   .owl-carousel .owl-nav button.owl-next, .owl-carousel .owl-nav button.owl-prev, .owl-carousel button.owl-dot 
+   {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: $secondColor;
+   }
+}

@@ -1,0 +1,80 @@
+@use "./../abstracts" as * ;
+#Why_Us 
+{
+    .part1 
+    {
+        .item 
+        {
+            .box 
+            {
+                background-image: url("../images_L10/images/best.jpg");
+            }
+        }
+    }
+    .part2 
+    {
+        .item 
+        {
+            .box 
+            {
+                background-image: url("../images_L10/images/solutions.jpg");
+            }
+        }
+    }
+    .part3 
+    {
+        .item 
+        {
+            .box 
+            {
+                background-image: url("../images_L10/images/teamwork.jpg");
+            }
+        }
+    }
+   .item 
+   {
+     transition-property: all;
+    transform: translate(0,0);
+    background-color: $secondColor;
+    @include createEle(350px , 450px);
+    margin: auto;
+    @include respond(350)
+    {
+        @include distance(280px, 450px)
+    }
+        .box 
+        {
+            @include createEle(100% , 100%);
+            @include flex(flex-end,flex-start, column);
+            transition-duration: 0.5s;
+            overflow: hidden;
+            position: relative;
+
+            &::before 
+            {
+                @include createEle(100%,100%);
+                background: linear-gradient(0deg, #1e2022 0%, transparent 75%);
+                @include position($t : 0 , $l : 0);
+
+            }
+        
+
+            .content
+            {
+                position: relative;
+                p 
+                {
+                    color: $whiteColor;
+                }
+            }
+        }
+
+        &:hover 
+        {
+            .box 
+            {
+                transform: translate(-10px,10px);
+            }
+        }
+   }
+}

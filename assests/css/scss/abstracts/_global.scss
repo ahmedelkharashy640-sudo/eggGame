@@ -1,0 +1,11 @@
+@use "./variable" as *;
+@use "./mixins" as *;
+body {
+ 
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#1e528e), color-stop(50%, #728a7c), to(#e9ce5d));
+  background-image: linear-gradient(to bottom, #1e528e 0%, #728a7c 50%, #e9ce5d 100%);
+}
+.whiteColor 
+{
+    color : $whiteColor;
+}

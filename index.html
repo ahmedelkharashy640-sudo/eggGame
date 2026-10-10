@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Favicon  -->
+    <link rel="shortcut icon" id="ShortcutIcon" href="./assests/images_L10/images/logo.png" image="/x-icon">
+
+    <!-- title  -->
+    <title>Drop Egg Game</title>
+
+
+
+    <!------------------ css links ------------------>
+    <link rel="stylesheet" href="./assests/css/all.min.css">
+    <link rel="stylesheet" href="./assests/css/fonts.css">
+    <link rel="stylesheet" href="./assests/css/bootstrap.css">
+    <link rel="stylesheet" href="./assests/css/keyframes.css">
+    <link rel="stylesheet" href="./assests/css/style.css">
+    <link rel="stylesheet" href="./assests/css/style.responsive.css">
+</head>
+
+<body>
+    <div id="Game">
+        <!-- navbar  -->
+        <nav class="text-center py-3 bg-info text-light">
+            <h5>
+                    Score : <span class="score">0</span> | 
+                    <span class="text-danger">Life Score</span> : <span id="LifeScore">5</span> | 
+                    Highest Score : <span id="HighestScore">0</span> | 
+                    Use mouse to control 
+            </h5>
+        </nav>
+
+        <!-- chicken Container  -->
+        <div id="ChickenContainer">
+            <div class="chicken">
+                <i class="fa-solid fa-egg egg"></i>
+                <img src="./assests/DropEgg_Images/images/hen-right.png" alt="Hen_image">
+            </div>
+            <div class="chicken">
+                <i class="fa-solid fa-egg egg"></i>
+                <img src="./assests/DropEgg_Images/images/hen-right.png" alt="Hen_image">
+            </div>
+            <div class="chicken">
+                <i class="fa-solid fa-egg egg"></i>
+                <img src="./assests/DropEgg_Images/images/hen-right.png" alt="Hen_image">
+            </div>
+        </div>
+
+        <!-- Start Buttons  -->
+        <div id="Start" class="bg-success  text-light">
+            <h4 class="text-center mb-0">Start Game</h4>
+            <h3 class="text-center"></h3>
+        </div>
+        <!-- Collection Basket  -->
+        <div id="Basket">
+            <img src="./assests/DropEgg_Images/images/basket2.png" alt="basket">
+            <span class="score">0</span>
+        </div>
+
+        <div id="BrokenEggContainer">
+            <div class="brokenEgg">
+                <img src="./assests/DropEgg_Images/images/brokenEgg.png" alt="BrokenEgg_image">
+            </div>
+            <div class="brokenEgg">
+                <img src="./assests/DropEgg_Images/images/brokenEgg.png" alt="BrokenEgg_image">
+            </div>
+            <div class="brokenEgg">
+                <img src="./assests/DropEgg_Images/images/brokenEgg.png" alt="BrokenEgg_image">
+            </div>
+        </div>
+
+        <!-- Footer  -->
+        <footer>
+            <img src="./assests/DropEgg_Images/images/Easter-Eggs.png" class="img-fluid" alt="Easter-Eggs">
+        </footer>
+    </div>
+
+    <!-- js links  -->
+    <script src="./assests/js/bootstrap.js"></script>
+    <script src="./assests/js/jquery.js"></script>
+    <script src="./assests/js/function.js"></script>
+    <script src="./assests/js/main.js"></script>
+</body>
+
+</html>

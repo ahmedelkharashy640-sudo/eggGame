@@ -1,0 +1,59 @@
+@use "./../abstracts/" as *; 
+nav.navbar {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    transition-duration: 0.5s;
+    .navbar-brand 
+    {
+        width: 12%;
+        transition-duration: 0.5s;
+        @include respond(350)
+        {
+            width: 20%;
+        }
+    }
+    .nav-link
+    {
+        color: $firstColor;
+        font-weight: 500;
+        position: relative;
+        padding: 0;
+
+        &.active   //^ It's mean the previous parent with active (.nav-link.active)
+        {
+            color: $firstColor;
+
+            &::after 
+                {
+                    width: 100%;
+
+                }
+        }
+        &::after 
+        {
+            @include createEle($w : 0% ,$h : 2px); //@ use include to add element from mixin
+            background-color: $secondColor;
+            transform: translate(-50%,5px);
+            transition-duration: .5s;
+            position: absolute;
+            left: 50%;
+            bottom: 0;
+        }
+        &:hover::after 
+        {
+            width: 100%;
+
+        }
+    }
+   &.scrolled {
+    background-color: $whiteColor;
+    .navbar-brand 
+    {
+        width: 9%;
+    }
+   }
+
+}

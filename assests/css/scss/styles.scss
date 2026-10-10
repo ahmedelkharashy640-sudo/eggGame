@@ -1,0 +1,115 @@
+@use "./abstracts" as *;
+
+
+#Game 
+{
+  height: 100vh;
+  overflow: hidden;
+  position: relative;
+  #ChickenContainer
+  {
+    position: relative;
+    height: 150px;
+    margin-top: 20px;
+     &::before 
+     {
+        @include createEle(); 
+        @include distance($h : 30px);
+        background-color: #333;
+        @include position($b : 0% , $l : 0%);
+
+        
+     }
+      .chicken 
+      {
+        @include position ($t : 0 , $l : 0);
+            transform: translateX(-50%);
+        @for $i from 0 through 3 
+        {
+            &:nth-of-type(#{$i})
+            {
+                left: #{$i * 25%};
+            }
+        }
+       
+           i {
+                @include position ($t : 50% , $l : 50%);
+                transform: translate(-50%,-50%);
+                color: $whiteColor;
+                z-index: 2;
+           }
+           img 
+           {
+                width: 150px;
+                position: relative;
+                z-index: 4;
+           }
+
+      }
+  }
+
+  #Start 
+  {
+    @include position($t : 50% , $l : 0%);
+    width: 100%;
+    transform: translateY(-50%);
+    padding: 20px 0px;
+    cursor: pointer;
+  }
+
+
+  #Basket 
+  {
+    width: fit-content;
+    @include position ($b : 28% , $l : 0%);
+
+    img 
+    {
+        width: 200px;
+    }
+    span 
+    {
+        @include position ($b : 5% , $l : 50%);
+
+        transform: translateX(-50%);
+        color: $whiteColor;
+        font-weight: bolder;
+        font-size: 20px;
+        
+    }
+  }
+  #BrokenEggContainer
+  {
+    height: 150px;
+    margin-top: 20px;
+    @include position ($b : 10% , $l : 0);
+     width: 100%;
+     z-index: 10;
+      .brokenEgg 
+      {
+        @include position ($t : 0 , $l : 0);
+        transform: translateX(-50%);
+        display: none;
+        @for $i from 0 through 3 
+        {
+            &:nth-of-type(#{$i})
+            {
+                left: #{$i * 25%};
+            }
+        }
+       
+         
+           img 
+           {
+                width: 100px;
+                position: relative;
+           }
+
+      }
+  }
+  footer 
+  {
+    @include position($b : 0%, $l : 0%);
+    width: 100%;
+  }
+}
