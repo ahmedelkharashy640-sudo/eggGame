@@ -16,7 +16,9 @@ $(window).on("mousemove", function (e) {
         
         $('#Basket').offset({
             left : e.pageX - halfOfBasket,
+
         });
+        currentLeft = e.pageX - halfOfBasket;
     };
 });
 
