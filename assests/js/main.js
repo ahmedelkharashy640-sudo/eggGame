@@ -8,7 +8,9 @@ let $eggs = $(".egg"),
     movingLeft =false,
     movingRight =false;
 
+
 $(window).on("mousemove touchmove", function (e) {
+     e.preventDefault();
     let pageX;
 
     if (e.type === "touchmove") {
