@@ -9,21 +9,23 @@ let $eggs = $(".egg"),
     movingRight =false;
 
 
-$(window).on("mousemove touchmove", function (e) {
-     e.preventDefault();
-    let pageX;
+$(window).on("mousemove", function (e) {
+    moveBasketWithTouch(e.pageX);
+});
 
-    if (e.type === "touchmove") {
-        pageX = e.originalEvent.touches[0].pageX;
-    } else {
-        pageX = e.pageX;
-    }
+$(window).on("touchmove", function (e) {
+    e.preventDefault();
 
+    let pageX = e.originalEvent.touches[0].pageX;
+    moveBasketWithTouch(pageX);
+});
+
+function moveBasketWithTouch(pageX) {
     let halfOfBasket = $basket.outerWidth(true) / 2;
 
     if (
         pageX >= halfOfBasket &&
-        pageX <= $(window).outerWidth(true) - halfOfBasket + 10
+        pageX <= $(window).width() - halfOfBasket + 10
     ) {
         $basket.offset({
             left: pageX - halfOfBasket
@@ -31,7 +33,7 @@ $(window).on("mousemove touchmove", function (e) {
 
         currentLeft = pageX - halfOfBasket;
     }
-});
+}
 
 $(window).on("keydown",function (e) {
     if(e.key === "ArrowLeft")
@@ -55,6 +57,9 @@ $(window).on("keyup",function (e) {
     }
 });
 
+$(".burger").on("click",function () {
+    $(this).toggleClass("active");
+});
 
 $("#Start").on("click",function (e) {
     resetGame();

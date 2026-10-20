@@ -157,7 +157,7 @@ nav h5 .burger {
     right: 25px;
   }
 }
-nav h5 .burger:focus + ul {
+nav h5 .burger.active + ul {
   height: 200px;
   padding: 20px 0px;
 }
@@ -206,6 +206,7 @@ nav h5 {
 }
 
 #Game {
+  touch-action: none;
   height: 100vh;
   overflow: hidden;
   position: relative;

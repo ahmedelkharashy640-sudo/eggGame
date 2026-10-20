@@ -111,7 +111,7 @@ nav
         top: 15px;
         right: 25px;
       }
-      &:focus + ul 
+      &.active + ul 
       {
          height: 200px;
          padding: 20px 0px;
@@ -165,6 +165,7 @@ nav
 }
 #Game 
 {
+  touch-action: none;
   height: 100vh;
   overflow: hidden;
   position: relative;
