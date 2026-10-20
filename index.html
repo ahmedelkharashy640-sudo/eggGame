@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- Favicon  -->
-    <link rel="shortcut icon" id="ShortcutIcon" href="./assests/images_L10/images/logo.png" image="/x-icon">
+    <link rel="shortcut icon" id="ShortcutIcon" href="./assests/DropEgg_Images/images/hen-right.png" image="/x-icon">
 
     <!-- title  -->
     <title>Drop Egg Game</title>
@@ -24,12 +24,30 @@
 <body>
     <div id="Game">
         <!-- navbar  -->
-        <nav class="text-center py-3 bg-info text-light">
+        <nav class="text-center py-3  text-light">
+             <div class="hen">
+                 <img src="./assests/DropEgg_Images/images/hen-right.png" alt="Hen_image">
+                <div class="content">
+                     <h3>Egg Drop!</h3>
+                    <p>Catch the eggs</p>
+                </div>
+             </div>
             <h5>
-                    Score : <span class="score">0</span> | 
-                    <span class="text-danger">Life Score</span> : <span id="LifeScore">5</span> | 
-                    Highest Score : <span id="HighestScore">0</span> | 
-                    Use mouse to control 
+                <div class="burger d-md-none">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+                <ul class="list-unstyled d-md-flex d-block row-gap-3">
+                    <li class="mb-3 mb-md-0"><span class="Score"> Score :</span> <span class="score">0</span> | </li>
+                    <li class="mb-3 mb-md-0"><span class="Life-Score">Life Score</span> : <span id="LifeScore">5</span> | </li>
+                    <li class="mb-3 mb-md-0"><span class="Highest-Score">Highest Score : </span><span id="HighestScore">0</span> |</li>
+                    <li class="mb-3 mb-md-0"><span class="move-mouse">Use mouse or Keyboard to control</span></li>
+                </ul>
+                   
+                    
+                     
+                   
             </h5>
         </nav>
 
@@ -50,7 +68,7 @@
         </div>
 
         <!-- Start Buttons  -->
-        <div id="Start" class="bg-success  text-light">
+        <div id="Start" class=" text-light">
             <h4 class="text-center mb-0">Start Game</h4>
             <h3 class="text-center"></h3>
         </div>

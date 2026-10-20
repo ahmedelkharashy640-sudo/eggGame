@@ -8,18 +8,27 @@ let $eggs = $(".egg"),
     movingLeft =false,
     movingRight =false;
 
-$(window).on("mousemove", function (e) {
-    console.log(e.pageX, e.pageY);
+$(window).on("mousemove touchmove", function (e) {
+    let pageX;
 
-    let halfOfBasket = $("#Basket").outerWidth(true) /2;
-    if (e.pageX >= halfOfBasket && e.pageX <= ($(window).outerWidth(true) - (halfOfBasket - 10))) {
-        
-        $('#Basket').offset({
-            left : e.pageX - halfOfBasket,
+    if (e.type === "touchmove") {
+        pageX = e.originalEvent.touches[0].pageX;
+    } else {
+        pageX = e.pageX;
+    }
 
+    let halfOfBasket = $basket.outerWidth(true) / 2;
+
+    if (
+        pageX >= halfOfBasket &&
+        pageX <= $(window).outerWidth(true) - halfOfBasket + 10
+    ) {
+        $basket.offset({
+            left: pageX - halfOfBasket
         });
-        currentLeft = e.pageX - halfOfBasket;
-    };
+
+        currentLeft = pageX - halfOfBasket;
+    }
 });
 
 $(window).on("keydown",function (e) {

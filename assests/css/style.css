@@ -46,6 +46,141 @@ body {
     transform: translateY(40px);
   }
 }
+nav {
+  background: #ebcc34;
+  background: -webkit-linear-gradient(to right, #eaeaea, #dbdbdb, #f2f2f2, #ada996);
+  background: linear-gradient(to right, #dcca96, #daddb3, #f1eeee, #eadda1);
+  border-bottom: 4px solid #c8a363;
+  border-radius: 0 0 16px 16px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), inset 0 1px 0 rgba(255, 255, 255, 0.8);
+  width: 100%;
+  height: 70px;
+  padding: 0 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  position: relative;
+}
+nav .hen {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  position: absolute;
+  top: 0;
+  left: 25%;
+  /*350*/
+}
+@media (min-width: 769px) and (max-width: 1300px) {
+  nav .hen {
+    left: 20%;
+  }
+}
+nav .hen img {
+  width: 70px;
+  transform: translateX(-200%);
+}
+nav .hen .content h3 {
+  color: #6b3a15;
+  font-weight: bold;
+  margin-bottom: 0;
+  transform: translateX(-100%);
+}
+nav .hen .content p {
+  color: #dda357;
+  font-weight: bold;
+  margin-bottom: 0px;
+  transform: translateX(-100%);
+}
+nav h5 .Score {
+  color: #d8a348;
+}
+nav h5 .Life-Score {
+  color: #a3612d;
+}
+nav h5 .Highest-Score {
+  color: #d8a348;
+}
+nav h5 .move-mouse {
+  color: #a3612d;
+}
+nav h5 .burger {
+  /*350*/
+}
+@media (max-width: 1300px) {
+  nav h5 .burger {
+    width: 45px;
+    height: 35px;
+    background-color: transparent;
+    border-radius: 5px;
+    border: 1px solid #a3612d;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+  }
+  nav h5 .burger span {
+    display: block;
+    background-color: #a3612d;
+    width: 65%;
+    height: 2px;
+  }
+  nav h5 .burger {
+    position: absolute;
+    top: 15px;
+    right: 25px;
+  }
+}
+nav h5 .burger:focus + ul {
+  height: 200px;
+  padding: 20px 0px;
+}
+nav h5 {
+  /*350*/
+}
+@media (max-width: 1300px) {
+  nav h5 ul {
+    position: absolute;
+    background: -webkit-linear-gradient(to right, #eaeaea, #dbdbdb, #f2f2f2, #ada996);
+    background: linear-gradient(to bottom, #d2b45f, #ecede1, #f1eeee, #ffe363);
+    top: -120px;
+    left: 50%;
+    width: 95%;
+    max-width: 550px;
+    transform: translate(-50%, 100%);
+    flex-direction: column;
+    text-align: center;
+    border-radius: 10px;
+    height: 0px;
+    column-gap: 0px;
+    row-gap: 24px;
+    overflow: hidden;
+    transition-duration: 1s;
+    transition-duration: 0.5s;
+    transition-property: all;
+    z-index: 1000;
+  }
+}
+nav h5 {
+  /*350*/
+}
+@media (min-width: 769px) and (max-width: 1300px) {
+  nav h5 ul {
+    position: static;
+    width: initial;
+    flex-direction: row;
+    height: auto;
+    background: none;
+    transform: translate(25%, 25%);
+    max-width: 100%;
+    column-gap: 10px;
+  }
+  nav h5 ul li {
+    font-size: 15px;
+  }
+}
+
 #Game {
   height: 100vh;
   overflow: hidden;
@@ -55,6 +190,12 @@ body {
   position: relative;
   height: 150px;
   margin-top: 20px;
+  /*350*/
+}
+@media (max-width: 1300px) {
+  #Game #ChickenContainer {
+    height: 100px;
+  }
 }
 #Game #ChickenContainer::before {
   content: "";
@@ -63,7 +204,8 @@ body {
   height: 100%;
   width: 100%;
   height: 30px;
-  background-color: #333;
+  background: -webkit-linear-gradient(to right, #eaeaea, #dbdbdb, #f2f2f2, #ada996);
+  background: linear-gradient(to right, #a58a76, #b7845c, #a3612d, #c5a083);
   position: absolute;
   top: initial;
   bottom: 0%;
@@ -92,6 +234,17 @@ body {
 #Game #ChickenContainer .chicken:nth-of-type(3) {
   left: 75%;
 }
+#Game #ChickenContainer .chicken {
+  /*350*/
+}
+@media (max-width: 1300px) {
+  #Game #ChickenContainer .chicken:nth-of-type(1) {
+    transform: translateX(-70px);
+  }
+  #Game #ChickenContainer .chicken:nth-of-type(3) {
+    transform: translateX(-10px);
+  }
+}
 #Game #ChickenContainer .chicken i {
   position: absolute;
   top: 50%;
@@ -107,6 +260,12 @@ body {
   width: 150px;
   position: relative;
   z-index: 4;
+  /*350*/
+}
+@media (max-width: 1300px) {
+  #Game #ChickenContainer .chicken img {
+    max-width: 80px;
+  }
 }
 #Game #Start {
   position: absolute;
@@ -119,6 +278,13 @@ body {
   transform: translateY(-50%);
   padding: 20px 0px;
   cursor: pointer;
+  background: -webkit-linear-gradient(to right, #eaeaea, #dbdbdb, #f2f2f2, #ada996);
+  background: linear-gradient(to right, #fcd35e, #cbcdae, #d2d4bc, #c0ad53);
+  border-bottom: 4px solid #c8a363;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), inset 0 1px 0 rgba(255, 255, 255, 0.8);
+}
+#Game #Start .text-center {
+  color: #a3612d;
 }
 #Game #Basket {
   width: fit-content;
@@ -131,6 +297,12 @@ body {
 }
 #Game #Basket img {
   width: 200px;
+  /*350*/
+}
+@media (max-width: 1300px) {
+  #Game #Basket img {
+    width: 150px;
+  }
 }
 #Game #Basket span {
   position: absolute;
@@ -190,6 +362,19 @@ body {
   right: initial;
   z-index: initial;
   width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+}
+#Game footer img {
+  /*350*/
+}
+@media (max-width: 1300px) {
+  #Game footer img {
+    width: 90%;
+    max-width: 100%;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */

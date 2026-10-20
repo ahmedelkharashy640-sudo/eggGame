@@ -1,7 +1,7 @@
 function startGame() {
-  moveEgg($eggs[0], Math.random() * 10);
-  moveEgg($eggs[1], Math.random() * 10);
-  moveEgg($eggs[2], Math.random() * 10);
+  moveEgg($eggs[0], Math.random() * 5);
+  moveEgg($eggs[1], Math.random() * 5);
+  moveEgg($eggs[2], Math.random() * 5);
 
   isEggHunted($eggs[0]);
   isEggHunted($eggs[1]);
@@ -40,14 +40,16 @@ function resetGame() {
 function moveBasket() {
   if(movingLeft)
   {
-    currentLeft -=10;
+    currentLeft -=20;
    
   }
   else if(movingRight)
   {
-    currentLeft +=10;
+    currentLeft +=20;
   }
-  
+  let maxLeft = $(window).width() - $basket.outerWidth();
+
+  currentLeft = Math.max(0,Math.min(currentLeft, maxLeft));
   $basket.offset({
     left : currentLeft,
   });
