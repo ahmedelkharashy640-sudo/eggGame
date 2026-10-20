@@ -21,7 +21,15 @@ nav
     @include flex();
     position: absolute;
     top: 0;
-    left: 25%;
+    left: 30%;
+    @include respond(350)
+    {
+      left: 35%;
+    }
+    @include respond(650)
+    {
+      left: 30%;
+    }
     @include respond(850)
     {
       left: 20%;
@@ -70,8 +78,17 @@ nav
     {
       color: #a3612d;
     }
+     ul 
+      {
+         transform: translateX(30%);
+         @include respond(350)
+         {
+          transform: none;
+         }
+      }
     .burger 
     {
+     
       @include respond(350)
       {
         width: 45px;
@@ -123,6 +140,7 @@ nav
           transition-duration: 0.5s;
           transition-property: all;
           z-index: 1000;
+         
         }
       }
       @include respond(850)
@@ -135,7 +153,6 @@ nav
           background: none;
           transform: translate(25%,25%);
           max-width: 100%;
-          column-gap: 10px;
           li 
           {
             font-size: 15px;

@@ -69,7 +69,23 @@ nav .hen {
   flex-direction: row;
   position: absolute;
   top: 0;
-  left: 25%;
+  left: 30%;
+  /*350*/
+}
+@media (max-width: 1300px) {
+  nav .hen {
+    left: 35%;
+  }
+}
+nav .hen {
+  /*350*/
+}
+@media (min-width: 577px) and (max-width: 1300px) {
+  nav .hen {
+    left: 30%;
+  }
+}
+nav .hen {
   /*350*/
 }
 @media (min-width: 769px) and (max-width: 1300px) {
@@ -104,6 +120,15 @@ nav h5 .Highest-Score {
 }
 nav h5 .move-mouse {
   color: #a3612d;
+}
+nav h5 ul {
+  transform: translateX(30%);
+  /*350*/
+}
+@media (max-width: 1300px) {
+  nav h5 ul {
+    transform: none;
+  }
 }
 nav h5 .burger {
   /*350*/
@@ -174,7 +199,6 @@ nav h5 {
     background: none;
     transform: translate(25%, 25%);
     max-width: 100%;
-    column-gap: 10px;
   }
   nav h5 ul li {
     font-size: 15px;
